@@ -1,0 +1,144 @@
+/* sail */ @import url('https://fonts.googleapis.com/css2?family=Sail&display=swap');
+/* permanent marker */@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
+body {
+    /* border: 10px white; */
+    background: #f7f7f7;
+}
+
+/* polaroid image frames adapted from:
+https://codepen.io/Wandersonsc/pen/RMerRy */
+.polaroiditem {
+    width: 40%;
+    display: block;
+    margin: auto;
+    /* margin-top: 0.25rem; */
+}
+
+.polaroid {
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
+
+}
+
+.polaroid > img {
+    max-width: 100%;
+    height: auto;
+    background-color: #005599
+}
+
+.permanent-marker-regular {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sail-regular {
+  font-family: "Sail", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.caption {
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 2em;
+    font-family: "Permanent Marker", cursive;
+}
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 15em;
+    max-width: auto;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .menuimg {
+    width: 60%;
+    display: block;
+    margin: auto;
+    padding: auto;
+
+    border: thick double;
+    border-width: 0.5rem;
+  }
+  .menuimg > img {
+    width: 100%;
+
+    padding: 2px;
+    border: double;
+}
+
+.menuhighlight {
+  width: 30%;
+  display: block;
+  margin: auto;
+  padding: 0px;
+
+
+
+  border: thick double;
+  border-width: 0.5rem;
+
+}
+
+.menuhighlight > img {
+  width: 100%;
+
+  border: double;
+}
+
+.menuhighlight-caption {
+  text-align: justify;
+}
+
+.recipelist {
+  width: 90%;
+}
+
+header > a > img,
+header > img {
+  display:block;
+  width:300px;
+  margin:auto;
+}
+
+.paper {
+
+  border-style: solid;
+  border-color: #FFFCF5;
+  border-width: 5px;
+  border-radius: 2px;
+
+  background-color: #FFFCF5;
+  background-size: 40px 40px;
+  background-image: radial-gradient(circle, #e0e0e0 1px, rgba(0, 0, 0, 0) 1px);
+
+}
+
+/* Scroll to top button is from this w3schools tutorial:
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top */
+#scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: solid;
+  background-color: #111111;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#scroll-to-top:hover {
+  background-color: red;
+}
+
+#logo {
+  padding: 10px;
+}

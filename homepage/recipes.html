@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+
+
+
+        <title>Recipes | Max</title>
+        <link rel="icon" type="image/x-con" href="imgs/favicon16x16.png">
+
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
+            body {
+                overflow-x: unset;
+                background-image: url("imgs/cork-board.webp");
+                backdrop-filter: blur(1px);
+            }
+
+            main {
+                margin: auto;
+                padding: 5px;
+            }
+
+            .scroll-area {
+                /* position: relative; */
+                height: 100%;
+                /* overflow-y: scroll; */
+            }
+
+            main>h1,
+            p,
+            .reviewcategory,
+            .reviewitem {
+                margin: 10px;
+                padding: 5px;
+            }
+
+            #navbar-left {
+                border-style: solid;
+                border-color: #FFFCF5;
+                border-width: 5px;
+                border-radius: 10px;
+
+                position: sticky;
+                top: 30px;
+                max-height: 75vh;
+                overflow-y: auto;
+                background-color: #FFFCF5;
+                background-size: 40px 40px;
+                background-image: radial-gradient(circle, #e0e0e0 1px, rgba(0, 0, 0, 0) 1px);
+            }
+
+            .reviewcategory,
+            #opening {
+
+                border-style: solid;
+                border-color: #FFFCF5;
+                border-width: 5px;
+                border-radius: 20px;
+
+                background-color: #FFFCF5;
+                background-size: 40px 40px;
+                background-image: radial-gradient(circle, #e0e0e0 1px, rgba(0, 0, 0, 0) 1px);
+
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <a href="index.html">
+                <img id="logo" src="imgs/homepage-logo-small.png" alt="Lemme Eat That For You homepage">
+            </a>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-auto paper text-center mx-auto w-auto h-auto p-0 my-2 justify-content-md-center">
+                        | <a href="index.html">home</a> |
+                        <a href="culvers.html">culver's</a> |
+                        <a href="restaurants.html">restaurants</a> |
+                        <a href="recipes.html">recipes</a> |
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="row flex-nowrap">
+                <div class="col-3">
+                    <nav id="navbar-left" class="h-auto flex-column align-items-stretch pe-1 border-end">
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link" href="#opening">Intro</a>
+                            <a class="nav-link" href="#tortilla">Flour Tortillas</a>
+                            <a class="nav-link" href="#focaccia">Focaccia</a>
+                            <a class="nav-link" href="#dough">Pizza Dough</a>
+                            <a class="nav-link" href="#pizza">Pizza</a>
+                        </nav>
+                    </nav>
+                </div>
+
+                <div class="col">
+                    <div class="scroll-area" data-bs-spy="scroll" data-bs-target="#navbar-left" tabindex="0">
+                        <div class="container" id="opening">
+                            <h1 id="My-Take">Max's Recipe Cards</h1>
+                            <p>I love to cook. Here are some recipes I use a lot at home. I’ve been especially into baking of late, hope you’re stocked up on flour.</p>
+                        </div>
+
+                        <article class="reviewcategory" id="tortilla">
+                            <h2>
+                                <span>Flour Tortillas</span>
+                            </h2>
+
+                            <p>Adapted from: <a href="https://www.kingarthurbaking.com/recipes/simple-tortillas-recipe">www.kingarthurbaking.com/recipes/simple-tortillas-recipe</a></p>
+
+                            <hr>
+
+                            <div class="row flex-nowrap">
+                                <div class="col col-lg-6">
+                                    <div class="mx-auto px-auto">
+                                        <div class="polaroid"><img src="imgs/recipe/tortilla01.png" alt="basket of tortillas">
+                                            <div class="caption">
+                                                MY LATEST BATCH
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <p>I like to make my own tortillas, they're striaightforward enough to do and, being homemade, they add something special to the meal. The tortillas made from this recipe can be used in just about any flat bread application. When I pull out the pressure cooker to make my salsa verde chicken these tortillas are what we eat it on. I’ve also made Italian piadine with these by heating them in a pan with mozzarella and prosciutto. </p>
+                                    <p>Substitute your favorite fats in place of the lard, though be warned that liquid fats could make the dough too wet. You can make vegan tortillas by using vegetable shortening or coconut oil. My favorite fat to use is leftover bacon drippings, but cut out a pinch of salt if you go this route though. </p>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <div class="recipelist mx-auto">
+                                <h3>Yield:</h3>
+                                <p>8-10 tortillas</p>
+                                <h3>Ingredients:</h3>
+                                <ul>
+                                    <li>2 cups (~290 grams) all purpose flour</li>
+                                    <li>1 ½ teaspoons baking powder</li>
+                                    <li>1 ½ teaspoons kosher salt</li>
+                                    <li>3 tablespoons lard</li>
+                                    <li>¾ cup (~170 grams) warm water (around 110°F)</li>
+                                </ul>
+                            </div>
+                            <div class="recipelist mx-auto">
+                                <h3>Instructions:</h3>
+                                <ol>
+                                    <li>In a large bowl, mix the flour, baking powder and salt until well combined.</li>
+                                    <li>With your fingers, rub the lard into the dry ingredients until the mixture resembles sandy pebbles.</li>
+                                    <li>Make a well in the center of the flour-lard mixture and pour in the water. Gently knead the dough together with your hands or a dough whisk until just combined.</li>
+                                    <li>Cover the bowl with a towel or plastic wrap and let dough rest for 10 minutes.</li>
+                                    <li>Near the end of the resting time, prepare a work surface with a dusting of flour. After the dough has rested, roll it into a long log. Cut the log into as many pieces as you’d like, 8 is a good starting point to give medium-large tortillas. Roll each piece into a ball.</li>
+                                    <li>Cover dough balls under a towel or plastic wrap for 15 minutes.</li>
+                                    <li>Near the end of the resting time, prepare a tortilla basket with a cloth napkin and heat a skillet or non-stick pan over a medium flame.</li>
+                                    <li>
+                                        After the dough balls have rested, take one ball and use a rolling pin to flatten it to a thin round on a flour-dusted work surface.
+                                        <ul>
+                                            <li>To roll the dough balls, first flatten the ball between your hands so it becomes more of a puck.</li>
+                                            <li>Next, use the rolling pin up and down on the dough to make a tall oval.</li>
+                                            <li>Next, pick the dough up from the work surface and rotate it 90°. Use the rolling pin the same as before to make the short oval tall in this direction.</li>
+                                            <li>Repeat until desired thickness is reached.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Transfer the flat dough onto the hot skillet. Be careful to ensure the tortilla lays flat in the pan and that you do not burn yourself in the process. Air bubbles in the dough should start to appear seconds after the tortilla is in the pan.
+                                        <ul>
+                                            <li>Flatten another dough ball as the tortilla cooks, being careful to not allow the tortilla to burn.</li>
+                                        </ul>
+                                    </li>
+                                    <li>After 30-60 seconds flip the tortilla over to the other side.</li>
+                                    <li>After 30-45 seconds, remove the tortilla from the pan into the prepared tortilla basket.</li>
+                                    <li>Continue rolling and cooking tortillas until the dough is exhausted.</li>
+                                </ol>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <h5>Storage:</h5>
+                                        <p>Keep in a cloth napkin for a few days. If storing for longer than a few days, keep in a ziplock bag in the fridge for up to a week. If freezing, place a layer of parchment paper between each tortilla.</p>
+                                    </div>
+                                    <div class="col">
+                                        <div class="mx-auto">
+                                            <div class="polaroid"><img src="imgs/recipe/tortilla02.png" alt="holding some tortillas">
+                                                <div class="caption">
+                                                    TORTILLA TIME
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </article>
+
+                        <article class="reviewcategory" id="focaccia">
+                            <h2>
+                                <span>Focaccia</span>
+                            </h2>
+
+                            <p>From: <a href="https://www.saltfatacidheat.com/fat/ligurian-focaccia">www.saltfatacidheat.com/fat/ligurian-focaccia</a></p>
+
+                            <hr>
+
+                            <div class="row flex-nowrap">
+                                <div class="col col-lg-6">
+                                    <div class="mx-auto">
+                                        <div class="polaroid"><img src="imgs/recipe/focaccia02.webp" alt="focaccia with a bidoof plushy">
+                                            <div class="caption">
+                                                feeding my bidoof
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <p>I saw Samin Nosrat making this recipe with Brad Leone on the Bon Appétit YouTube channel <a href="https://www.youtube.com/watch?v=RQOhAeNAjKc">(link here!)</a> and with all due respect, they make it look a lot harder to make this than it is. This recipe is stupid simple once you know the steps. During the pandemic lock down I tried and failed to make this more than once. My downfall was trying to do everything all in one day; I’d get impatient or run out of time and not allow the bread to ferment and proof for long enough. I was also using the wrong kind of pan and the bread would be stuck to the corners. It was frustrating but after baking more and attempting other recipes I learned how to make this bread consistently. </p>
+                                    <p>The secret ingredient in this recipe is time. Don’t rush the 12-14 hour ferment and let the yeast work so you don’t have to. I like to mix the dough ingredients in the evening after dinner (before starting the dishes) and finish the bread the next morning. By lunch the bread is cooled down and I can eat a slice. Some more important advice for this recipe: measure by weight instead of by volume. The way I see it, relying on a scale gives you more precision than eyeballing a measuring cup. This recipe is pretty forgiving but if the ratio of water to dry ingredients in this recipe is too far off you’re in for a dry focaccia or a difficult time handling the dough.</p>
+                                    <p>Eating this focaccia is wonderful even when it’s plain with no condiment. I like to pulse up a can of nice whole tomatoes with some salt to make a quick and easy dip for it. As a sandwich bread this focaccia steals the show. Recently I made a wine-braised pork shoulder and used that as a decadent sandwich filler along with some melted fresh mozzarella, confit tomato and chili crunch oil. If you slice it to a half inch thick and toast the pieces you’ll have a crunchy and hearty base for bruschettas, which is a great way to use up canned fish or some fine cheeses.</p>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <div class="recipelist mx-auto">
+                                <h3>Yield:</h3>
+                                <p>1 full 18-by-13 inch pan of focaccia</p>
+                                <h3>Ingredients:</h3>
+                                <h5>For the dough:</h5>
+                                <ul>
+                                    <li>2½ cups (600 grams) lukewarm water</li>
+                                    <li>½ teaspoon active dry yeast</li>
+                                    <li>2½ teaspoons (15 grams) honey</li>
+                                    <li>5 1/3 cups (800 grams) all-purpose flour</li>
+                                    <li>2 tablespoons (18 grams) Kosher salt or 1 tablespoon fine sea salt</li>
+                                    <li>¼ cup (50 grams) extra-virgin olive oil, plus more for pan and finishing</li>
+                                </ul>
+                                <h5>For the brine:</h5>
+                                <ul>
+                                    <li>1½ teaspoons (5 grams) Diamond Crystal Kosher Salt</li>
+                                    <li>⅓ cup (80 grams) lukewarm water</li>
+                                </ul>
+
+                            </div>
+                            <div class="recipelist mx-auto">
+                                <h3>Instructions:</h3>
+                                <ol>
+                                    <li>In a measuring jug or medium bowl, stir together water, yeast and honey until dissolved.</li>
+                                    <li>In a very large bowl, whisk flour and salt together to combine.</li>
+                                    <li>Make a well in the dry ingredients to add in the yeast mixture and olive oil.</li>
+                                    <li>Gently stir with a dough whisk until just incorporated, then scrape the sides of the bowl clean and cover with plastic wrap or a towel.</li>
+                                    <li>Leave at room temperature overnight for 12-14 hours to ferment and at least double in volume.</li>
+                                    <li>The next day, spread 2-3 tablespoons of olive oil evenly onto a 18-by-13 inch rimmed baking sheet.</li>
+                                    <li>When the dough is ready, remove it from the bowl onto the pan and fold it over itself gently.</li>
+                                    <li>Pour more olive oil as needed to, over the course of 30 minutes, gently stretch the dough to the edges of the pan. The dough will shrink back at first so allow it time to rest in between stretching.</li>
+                                    <li>Dimple the dough by pressing the pads of your first three fingers in at an angle.</li>
+                                    <li>Make the brine by stirring together salt and water until salt is dissolved.</li>
+                                    <li>Pour the brine over the dough to fill dimples and proof the focaccia for 45 minutes until the dough is light and bubbly.</li>
+                                    <li>Thirty minutes into this final proof, adjust rack to center position and preheat oven to 450°F (235°C). If you have a baking stone, place it on the rack. Otherwise, invert another sturdy baking sheet and place on the rack. Allow to preheat with the oven until very hot before proceeding with baking.</li>
+                                    <li>Bake the focaccia for 25 to 30 minutes directly on top of the stone or inverted pan until the bottom crust is crisp and golden brown when checked with a metal spatula.</li>
+                                    <li>To finish browning the top crust, place focaccia on the upper rack and bake for 5 to 7 minutes more.</li>
+                                    <li>Remove from the oven and brush or douse with 2 to 3 tablespoons of oil over the whole surface (don’t worry if the olive pools in pockets, it will absorb as it sits).</li>
+                                    <li>Let cool for 5 minutes, then release focaccia from the pan with a metal spatula and transfer to a cooling rack to cool completely.</li>
+                                    <li>After cooling, slice the focaccia into desired shapes.</li>
+                                </ol>
+                                <div class="row">
+                                    <div class="col">
+                                        <h5>Storage:</h5>
+                                        <p>Wrap the focaccia slice in parchment paper bound by rubber bands. If eating within a few days, store in a ziploc bag at room temp. Else store the parchment bundles in an airtight container in the fridge where it will last a little over a week, or in the freezer where it will keep for a month. Be sure to gently toast or reheat leftover focaccia before serving.</p>
+                                    </div>
+                                    <div class="col">
+                                        <div class="mx-auto">
+                                            <div class="polaroid"><img src="imgs/recipe/focaccia03.webp" alt="holding a slice of focaccia">
+                                                <div class="caption">
+                                                    la mia focaccia bellissima
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </article>
+
+                        <article class="reviewcategory" id="dough">
+                            <h2>
+                                <span>Pizza Dough</span>
+                            </h2>
+
+                            <p>From: <a href="https://www.seriouseats.com/jim-laheys-no-knead-pizza-dough-recipe">www.seriouseats.com/jim-laheys-no-knead-pizza-dough-recipe</a></p>
+
+                            <hr>
+
+                            <div class="row flex-nowrap">
+                                <div class="col col-lg-6">
+                                    <div class="mx-auto">
+                                        <div class="polaroid"><img src="imgs/recipe/0399Bidoof.png" alt="placeholder image of a bidoof">
+                                            <div class="caption">
+                                                this is a bidoof btw
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <p>Once you master the skillful technique of mixing dough at night and then falling asleep, you’ve reached the upper echelon of bread making. Ok not really, but the overnight ferment does allow you to make many nice tasty breads without a lot of effort. I like to use overnight ferment to make a batch of pizza dough that I can use throughout the week. I think it’s the meal that represents the best ratio between flavor and effort that the home cook strives for in the weekday meal category. Thanks to Jim Lahey of the Sullivan Street Bakery for pioneering the technique behind no-knead doughs.</p>
+                                    <p>The dough in this recipe makes beautiful pizzas. I’ll tell you how I make my pies in the next recipe on this page. But don’t stop at just za! Calzones, flat bread, and panuozzo (kind of a pizza-sandwich) are all possible with this dough.</p>
+                                    <p>You can make this dough with just flour, water, salt and yeast. This simplicity is attractive as you can have this dough fermenting with stuff that should be in any well-stocked pantry (you don’t even need fridge space!). I’ve made a lot of this dough, and have made a few batches with modifications. I include honey and olive oil in this recipe as a result of these experiments, and here’s why. For starters, they both lend their flavor to the finished product. Honey introduces more sugars into the dough as well, leading to a more crisp crust with maillard reaction flavors. Olive oil helps the dough feel softer and moist or “cool” as often described by bakers.</p>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <div class="recipelist mx-auto">
+                                <h3>Yield:</h3>
+                                <p>4 pizza dough balls, approx 220 grams each</p>
+                                <h3>Ingredients:</h3>
+                                <ul>
+                                    <li>500 grams all-purpose flour</li>
+                                    <li>1 gram (¼ teaspoon) active dry yeast</li>
+                                    <li>16 grams (2 teaspoons) kosher salt</li>
+                                    <li>1 tablespoon honey</li>
+                                    <li>1 tablespoon olive oil + more for oiling containers</li>
+                                    <li>350 grams water</li>
+                                </ul>
+                            </div>
+                            <div class="recipelist mx-auto">
+                                <h3>Instructions:</h3>
+                                <ol>
+                                    <li>In a large bowl, mix flour, yeast and salt together. Make a well in the center of this mixture.</li>
+                                    <li>Pour water, honey and olive oil into the dry ingredients, mix thoroughly until combined.</li>
+                                    <li>Cover the bowl with plastic wrap or a towel and allow to rise at room temperature for 18 hours until the dough has more than doubled in volume.</li>
+                                    <li>Scrape the dough from the bowl onto a well-floured work surface. Divide the dough into 4 equal parts and shape them: For each portion, start with the right side of the dough and pull it toward the center; then do the same with the left, then the top, then the bottom. (The order doesn’t actually matter; what you want is four folds.) Shape each portion into a round and turn seam side down. Mold dough into a neat circular mound. The mounds should not be sticky; if they are, dust with more flour.</li>
+                                    <li>If using dough right away, allow dough to rest at room temperature for 2 hours before it is needed.</li>
+                                </ol>
+                                <div class="row">
+                                    <div class="col">
+                                        <h5>Storage:</h5>
+                                        <p>Oil 4 quart-sized, lidded containers with olive oil and transfer dough balls into these containers. Keep in the fridge for up to 4 days. Return the dough to room temperature before using by setting it out at room temperature for an hour.</p>
+                                    </div>
+                                    <div class="col">
+                                        <div class="mx-auto">
+                                            <div class="polaroid"><img src="imgs/recipe/0399Bidoof.png" alt="placeholder image of a bidoof">
+                                                <div class="caption">
+                                                    il mio bidoof bellissimo
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </article>
+
+                        <article class="reviewcategory" id="pizza">
+                            <h2>
+                                <span>Pizza</span>
+                            </h2>
+
+                            <p>From: My experience!</p>
+
+                            <hr>
+
+                            <div class="row flex-nowrap">
+                                <div class="col col-lg-6">
+                                    <div class="mx-auto">
+                                        <div class="polaroid"><img src="imgs/recipe/pizza02.webp" alt="Italian sausage pizza">
+                                            <div class="caption">
+                                                Pizza topped with Italian Sausage
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <p>I make this pizza for a picky Italian who tells me it is very good, so you know this pizza is going to pop off. I like mine with pepperoni and thin slices of serrano pepper. My partner likes prosciutto, but with the ham laid on the pizza after baking so as to keep it raw. You can add whatever you fancy on this pizza, but exercise some restraint on quantity. Too much weight or water on this pizza can be lethal to the crust, which can only support so much. Something like a burrata, for instance, would go on after baking to ensure the crust sets up properly in the oven.</p>
+                                    <p>I don’t measure sauce or toppings when I make pizzas, I just tend to open ingredients as needed and keep the containers in the fridge until the next pizza dinner. Sorry if you find the recipe to be imprecise as a result. Also, there’s just no getting around the fact that to make this pizza well at home you’ll need a baking stone or steel in your oven. You can try the inverted pan method but I really wouldn’t bother unless you really know what you’re doing (but if you really know what you’re doing, you probably already have a baking stone/lead to a mess in your oven, and you’ll have to clean it all up frustrated with no pizza in your system. Be generous with the semolina as well, it might feel nooby but you don’t want that dough sticking anywhere.</p>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <div class="recipelist mx-auto">
+                                <h3>Yield:</h3>
+                                <p>1 Pizza</p>
+                                <h3>Ingredients:</h3>
+                                <ul>
+                                    <li>~220 gram pizza dough ball</li>
+                                    <li>semolina flour for dusting</li>
+                                    <li>all-purpose flour for dusting</li>
+                                    <li>~3 tablespoons blended san marzano tomatoes</li>
+                                    <li>~3-4 ounces mozzarella cheese, fresh or low moisture</li>
+                                </ul>
+                            </div>
+                            <div class="recipelist mx-auto">
+                                <h3>Instructions:</h3>
+                                <ol>
+                                    <li>Place baking stone or steel in a cold oven. Preheat the oven to 490°F or as hot as you can get it for an hour.</li>
+                                    <li>When the dough is room temperature and ready to work, dust a work surface generously with semolina and all purpose flour. In the container, dust the top of the dough ball with the flours as well. Invert the container onto the work surface, and dust the dough ball once more on the side now facing up.</li>
+                                    <li>Prepare a sheet of parchment paper with about the same dimensions of your baking stone/steel. Place it on a pizza peel or large cutting board and dust it with semolina and AP flour.</li>
+                                    <li>With your palms, flatten the dough ball into a disc about 5 inches across on the work surface. Pick up the dough and drape it over one fist. Take your other fist under the dough and gently stretch it out being careful not to tear the dough. The dough is ready when it fits just inside the parchment sheet. Place dough onto the parchment sheet. You can pinch and stretch at the corners of the dough to shape the dough more at this point.</li>
+                                    <li>Use a spoon to sauce the pizza by dolloping one scoop at a time into the middle of the dough. Use the back of the spoon to spread the sauce around in a circular pattern. Err on the side of too little sauce rather than too much to avoid a soupy pizza.</li>
+                                    <li>Sprinkle grated mozzarella overtop or tear fresh mozzarella and distribute evenly over the pizza.</li>
+                                    <li>Add toppings as you see fit. It’s your pizza so choose whatever you like but don’t overdo it!</li>
+                                    <li>Put the pizza on the parchment in the oven on the pizza stone/steel. To achieve this easily, take the pizza peel/cutting board to the oven and pinch the corner of the parchment farthest from you. While over the pizza stone, gently pull the board toward you while holding the parchment corner in place so the pizza falls onto the stone. Try to do this all quickly as the longer the oven door is open, the more heat escapes. Be confident!</li>
+                                    <li>Bake the pizza for 7-11 minutes, depending on how well-done you like your pizza. Watch the pizza with the oven light on to ensure it turns out well.</li>
+                                    <li>Remove pizza from the oven with a metal spatula onto a large plate. Add any toppings that don’t bake well. Allow to cool for a minute before serving and slicing.</li>
+                                </ol>
+                                <div class="row">
+                                    <div class="col">
+                                        <h5>Storage:</h5>
+                                        <p>Don’t! Eat this pizza fresh, it’s not the kind that tastes very good when it gets cold.</p>
+                                    </div>
+                                    <div class="col">
+                                        <div class="mx-auto">
+                                            <div class="polaroid"><img src="imgs/recipe/pizza01.webp" alt="cheese pizza with a phone playing Avatar the Last Airbender">
+                                                <div class="caption">
+                                                    Pizzavatar
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-auto paper text-center mx-auto w-auto h-auto p-0 justify-content-md-center">
+                    | <a href="index.html">home</a> |
+                    <a href="culvers.html">culver's</a> |
+                    <a href="restaurants.html">restaurants</a> |
+                    <a href="recipes.html">recipes</a> |
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll to top button is from this w3schools tutorial:
+        https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top -->
+        <button onclick="topFunction()" id="scroll-to-top" title="scroll to top" style="position:sticky; float:right;">Top</button>
+        <script>
+            let mybutton = document.getElementById("scroll-to-top");
+
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+    </body>
+</html>

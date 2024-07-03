@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+
+
+
+        <title>Culver's | Max</title>
+        <link rel="icon" type="image/x-con" href="imgs/favicon16x16.png">
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
+            body {
+                /* overflow-x: unset; */
+                overflow-y: scroll;
+                background-image: url("imgs/cork-board.webp");
+                backdrop-filter: blur(1px);
+            }
+
+            main {
+                margin: auto;
+                padding: 5px;
+            }
+
+            .scroll-area {
+                /* position: relative; */
+                /* height: auto; */
+                /* overflow-y: scroll; */
+            }
+
+            main>h1,
+            p,
+            .reviewcategory,
+            .reviewitem {
+                margin: 10px;
+                padding: 5px;
+            }
+
+            #navbar-left {
+                border-style: solid;
+                border-color: #FFFCF5;
+                border-width: 5px;
+                border-radius: 10px;
+
+                position: sticky;
+                top: 30px;
+                max-height: 75vh;
+                overflow-y: auto;
+                background-color: #FFFCF5;
+                background-size: 40px 40px;
+                background-image: radial-gradient(circle, #e0e0e0 1px, rgba(0, 0, 0, 0) 1px);
+            }
+
+            .reviewcategory,
+            #opening {
+
+                border-style: solid;
+                border-color: #FFFCF5;
+                border-width: 5px;
+                border-radius: 20px;
+
+                background-color: #FFFCF5;
+                background-size: 40px 40px;
+                background-image: radial-gradient(circle, #e0e0e0 1px, rgba(0, 0, 0, 0) 1px);
+
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <header>
+            <a href="index.html">
+                <img src="imgs/let4ya-burger-logo-small.png" alt="Lemme Eat That For You homepage">
+            </a>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-auto paper text-center mx-auto w-auto h-auto p-0 my-2 justify-content-md-center">
+                        | <a href="index.html">home</a> |
+                        <a href="culvers.html">culver's</a> |
+                        <a href="restaurants.html">restaurants</a> |
+                        <a href="recipes.html">recipes</a> |
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="row">
+                <div class="col-3" id="culvers-nav">
+                    <nav id="navbar-left" class="h-100 flex-column align-items-stretch pe-1 border-end">
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link" href="#My-Take">My Take</a>
+                            <a class="nav-link" href="#ButterBurgers">ButterBurgers®</a>
+                            <nav class="nav nav-pills flex-column">
+                                <a class="nav-link ms-3 my-0" href="#The-Culvers-Deluxe">The Culver's Deluxe</a>
+                                <a class="nav-link ms-3 my-0" href="#The-Culvers-Bacon-Deluxe">The Culver's Bacon Deluxe</a>
+                                <a class="nav-link ms-3 my-0" href="#ButterBurger-Cheese">ButterBurger® Cheese</a>
+                                <a class="nav-link ms-3 my-0" href="#ButterBurger">ButterBurger®</a>
+                                <a class="nav-link ms-3 my-0" href="#Mushroom-Swiss">Mushroom & Swiss</a>
+                                <a class="nav-link ms-3 my-0" href="#Sourdough-Melt">Sourdough Melt</a>
+                                <a class="nav-link ms-3 my-0 active" href="#Wisconsin-Swiss-Melt">Wisconsin Swiss Melt</a>
+                            </nav>
+                            <a class="nav-link" href="#Chicken-Sandwiches">Chicken & Sandwiches</a>
+                            <nav class="nav nav-pills flex-column">
+                                <a class="nav-link ms-3 my-0" href="#Original-Chicken-Tenders">Original Chicken Tenders</a>
+                                <a class="nav-link ms-3 my-0" href="#Buffalo-Chicken-Tenders">Buffalo Chicken Tenders</a>
+                                <a class="nav-link ms-3 my-0" href="#Crispy-Chicken">Crispy Chicken</a>
+                                <a class="nav-link ms-3 my-0" href="#Spicy-Crispy-Chicken">Spicy Crispy Chicken</a>
+                                <a class="nav-link ms-3 my-0" href="#Grilled-Chicken">Grilled Chicken</a>
+                                <a class="nav-link ms-3 my-0" href="#Beef-Pot-Roast">Beef Pot Roast</a>
+                                <a class="nav-link ms-3 my-0" href="#Grilled-Reuben-Melt">Grilled Reuben Melt</a>
+                                <a class="nav-link ms-3 my-0" href="#Pork-Loin">Pork Loin</a>
+                                <a class="nav-link ms-3 my-0" href="#Harvest-Veggie-Burger">Harvest Veggie Burger</a>
+                                <a class="nav-link ms-3 my-0" href="#Grilled-Cheese">Grilled Cheese</a>
+                                <a class="nav-link ms-3 my-0" href="#Corn-Dog">Corn Dog</a>
+                            </nav>
+                            <a class="nav-link" href="#Seafood-Salads">Seafood & Salads</a>
+                            <nav class="nav nav-pills flex-column">
+                                <a class="nav-link ms-3 my-0" href="#North-Atlantic-Cod-Sandwich">North Atlantic Cod Sandwich</a>
+                                <a class="nav-link ms-3 my-0" href="#North-Atlantic-Cod-Dinner">North Atlantic Cod Dinner</a>
+                                <a class="nav-link ms-3 my-0" href="#Butterfly-Jumbo-Shrimp-Dinner">Butterfly Jumbo Shrimp Dinner</a>
+                                <a class="nav-link ms-3 my-0" href="#Chicken-Cashew-Salad">Chicken Cashew Salad</a>
+                                <a class="nav-link ms-3 my-0" href="#Cranberry-Bacon-Bleu-Salad">Cranberry Bacon Bleu Salad</a>
+                                <a class="nav-link ms-3 my-0" href="#Garden-Fresco-Salad">Garden Fresco Salad</a>
+                            </nav>
+                            <a class="nav-link" href="#Sides">Sides</a>
+                            <nav class="nav nav-pills flex-column">
+                                <a class="nav-link ms-3 my-0" href="#Crinkle-Cut-Fries">Crinkle Cut Fries</a>
+                                <a class="nav-link ms-3 my-0" href="#Wisconsin-Cheese-Curds">Wisconsin Cheese Curds</a>
+                                <a class="nav-link ms-3 my-0" href="#Onion-Rings">Onion Rings</a>
+                                <a class="nav-link ms-3 my-0" href="#Pretzel-Bites">Pretzel Bites</a>
+                                <a class="nav-link ms-3 my-0" href="#Georges-Chili">George's® Chili</a>
+                                <a class="nav-link ms-3 my-0" href="#Georges-Chili-Supreme">George's® Chili Supreme</a>
+                                <a class="nav-link ms-3 my-0" href="#Chili-Cheddar-Fries">Chili Cheddar Fries</a>
+                                <a class="nav-link ms-3 my-0" href="#Steamed-Broccoli">Steamed Broccoli</a>
+                                <a class="nav-link ms-3 my-0" href="#Mashed-Potatoes-Gravy">Mashed Potatoes & Gravy</a>
+                                <a class="nav-link ms-3 my-0" href="#Coleslaw">Coleslaw</a>
+                                <a class="nav-link ms-3 my-0" href="#Garden-Side-Salad">Garden Side Salad</a>
+                                <a class="nav-link ms-3 my-0" href="#Applesauce">Applesauce</a>
+                            </nav>
+                        </nav>
+                    </nav>
+                </div>
+
+                <div class="col">
+                    <div class="scroll-area" data-bs-spy="scroll" data-bs-target="#navbar-left" tabindex="0">
+                        <div class="container" id="opening">
+                            <h1 id="My-Take">My Takes On the Culver's Menu</h1>
+                            <p>Regional fast food chain rivalries combine two time-tested American traditions: burgers and a smug sense of unearned superiority. Lucky for you, I’m very smug and love burgers so I have the correct opinion on the whole thing. I’m sorry to have to embarrass all the In-N-Out groupies and Whataburger lover’s in the world, but Culver’s is the crown jewel in America’s fast food tiara. At the level they operate, there’s no one else in the burger business that can match Culver’s exacting standard of quality across the gamut of choices offered at the restaurant.</p>
+                            <p>I am in the process of documenting my opinions on every item that Culver’s has to offer. One caveat: desserts are not on the list. I know, it’s a glaring omission. Frozen custard is one of Culver’s specialties, so much so that they offer a rotating custard flavor of the day. But listen, life isn’t all burgers and ice cream and I’m trying to drop a couple inches off my waistline. And hey, why don’t YOU go try the sundae if you’re so curious. Hopefully what you’ve read about the rest of the food has piqued your interest enough to visit a franchise. </p>
+                            <p>Loyalty to a favorite chain’s food runs thicker than the blood that very food thickens. I won’t be likely to persuade any from beyond the midwest to sing the praises of the ButtBurger®, but I’d like to talk a bit about the joy I feel for some of these treats.</p>
+                        </div>
+
+                        <article class="reviewcategory" id="ButterBurgers">
+                            <h2>
+                                <span>ButterBurgers®</span>
+                            </h2>
+
+                            <p>The bread and butter of the Culver's Menu. Fresh, never frozen ground beef is pressed on the grill to achieve a sear that locks in the patty's juices. The ButterBurger® serves as the foundation most of these sandwiches build upon.</p>
+                            <hr>
+
+                            <div class="container" id="The-Culvers-Deluxe">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/butterburgers/deluxe-double.png" alt="The Culver's Deluxe">
+                                        <div class="caption">
+                                            The Culver's Deluxe
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>A ButterBurger® with cheese, lettuce, tomato, pickle, red onion and mayo. The lightness of the salad, the briney acidity of the pickle and sharp flavor of raw onion brings balance to the fatty richness of the beef and cheese. It's well-rounded flavors are what make this burger a classic.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="The-Culvers-Bacon-Deluxe">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/butterburgers/bacon-deluxe-double.png" alt="The Culver's Bacon Deluxe">
+                                        <div class="caption">
+                                            The Culver's Bacon Deluxe
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>A ButterBurger® with Culver's Deluxe salad toppings and bacon strips between the patties. I’ve always found bacon to be an unnecessary but welcome burger topping. In this sandwich, it does elevate the experience by introducing that iconic, smokey, cured pork flavor. This bacon flavor, however, can be hard to locate under the many layers already in this sandwich. If you want to really taste that bacon, my recommendation is to forego pickles and onions so you can really get slapped in the face with bacon.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="ButterBurger-Cheese">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/butterburgers/cheese-double.png" alt="ButterBurger® Cheese">
+                                        <div class="caption">
+                                            ButterBurger® Cheese
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>Culver's most basic burger with the addition of cheese.</p>
+                                <p>To be reviewed.</p>
+                            </div>
+                            <hr>
+
+
+                            <div class="container" id="ButterBurger">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/butterburgers/original-double.png" alt="ButterBurger®">
+                                        <div class="caption">
+                                            ButterBurger®
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>Culver's most basic burger. Did you know they're named as such because the buns are lightly buttered after toasting?</p>
+                                <p>To be reviewed.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Mushroom-Swiss">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/butterburgers/mushroom-swiss-double.png" alt="Mushroom & Swiss">
+                                        <div class="caption">
+                                            Mushroom & Swiss
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>From here to the end of the menu is what I like to call the “picky eater zone”. These items are assembled without any fresh or pickled vegetable toppings by default (although Culver’s does encourage their customers to customize any menu item as they like). Where the previous burgers on this list balanced rich fattiness with freshness and acidity, this burger goes all the way in on the unctuous flavors of beef and mushroom. The white button shrooms are cooked until all their moisture content is replaced with butter and seasoned with parsley and garlic. Every bite of this sandwich is an umami explosion complimented by the subtle tang from swiss cheese. The three simple elements between the buns of this burger work together to create such a satisfying sandwich that I am compelled to proclaim it as one of Culver’s best menu items. My partner’s go-to order is the Mushroom & Swiss value basket with double mushrooms, and that makes them a genius in my eyes.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Sourdough-Melt">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/butterburgers/sourdough-double.png" alt="Sourdough Melt">
+                                        <div class="caption">
+                                            Sourdough Melt
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>One of two takes on a patty melt that Culver’s hangs up on their menu. This sandwich uses sourdough bread slices in lieu of the traditional burger bun. The upside of this is that on the top and bottom of the sandwich is a thin yet crisp toasted layer that adds a bit of texture to what could be an otherwise monotonous bite. The standard never-frozen patties, aged cheddar cheese and grilled red onion lay between the sliced bread. In this simple sandwich the ground beef patty is the star of the show, serving as a testament to how the culver’s burger patties can stand on their own. Sweet grilled onion and slightly sharp mature cheddar slightly augment the predominantly beefy taste. This is the first sandwich where every ingredient, from bun to beef, is hot all the way through. As a result of this, the patty melt category keeps its freshness longer; they don't decline in quality as quickly as other ButterBurgers as the hot patties won’t wilt any cool vegetable toppings. </p>
+                            </div>
+                            <hr>
+
+                            <div class="container">
+                                <div class="polaroiditem" id="Wisconsin-Swiss-Melt">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/butterburgers/wi-swiss-double.png" alt="Wisconsin Swiss Melt">
+                                        <div class="caption">
+                                            Wisconsin Swiss Melt
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>Culver’s other patty melt: grilled onions and beef patties on rye bread with swiss. Very similar to the sourdough melt with only two differences: the swiss cheese and the rye bread. Let’s talk about this rye bread and my favorite thing about it: it’s got caraway seeds baked into it. The strong flavor of rye and the unctuous smash patty are well complemented by the bitter-sweet warmth of the caraway.</p>
+                            </div>
+
+                        </article>
+
+                        <article class="reviewcategory" id="Chicken-Sandwiches">
+                            <h2>Chicken & Sandwiches</h2>
+                            <p> yummy chicken mmmmm</p>
+                            <hr>
+
+                            <div class="container" id="Original-Chicken-Tenders">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/chicken-sandwiches/chicken/original-chicken-tenders-4pc.png" alt="Original Chicken Tenders">
+                                        <div class="caption">
+                                            Original Chicken Tenders
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>Some of the best fast food chicken tenders money can buy, as a result of being made from a decent quality chicken and fried to order these tenders are exceptionally juicy. Has a bread crumb style coating rather than the seasoned flour dredge that I see more often in a chicken tender. This bread crumb coat stands up to being dipped very well, staying cripsy no matter what the sauce is. I tend to go for BBQ sauce.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Buffalo-Chicken-Tenders">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/chicken-sandwiches/chicken/buffalo-chicken-tenders-4pc.png" alt="Buffalo Chicken Tenders">
+                                        <div class="caption">
+                                            Buffalo Chicken Tenders
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>The breading on these tenders is a flour dredge flavored with paprika, chili pepper and black pepper. These spices add some nice heat to the tender, and the flour dredge makes for a crackly crunchy crust that contrasts the juicy, tender chicken within. A menu with two different preparations and flavors of chicken tender is such a flex, a true testament to how seriously Culver’s takes their mission of providing quality choices to their customers. I get the BBQ sauce with these too, I love the sweet tanginess with the heat of the crust.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Crispy-Chicken">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/chicken-sandwiches/chicken/crispy-chicken-sandwich.png" alt="Crispy Chicken">
+                                        <div class="caption">
+                                            Crispy Chicken
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>To be reviewed.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Spicy-Crispy-Chicken">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/chicken-sandwiches/chicken/spicy-crispy-chicken-sandwich.png" alt="Spicy Crispy Chicken">
+                                        <div class="caption">
+                                            Spicy Crispy Chicken
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>They can't be the best at everything. I hope this is evidence enough of my integrity as a critic, I won’t lead you astray and oversell a sandwich that I think is just okay. Of late, fast food chicken sandwiches have been making great strides as a category with a lot of really stellar options from the likes of Popeye’s and Raising Cane's. Culver’s is not the leader in this race, but it’s not the laggard either. The lack of a great sauce is what is holding them back in my eyes. Currently the sandwich is bun, chicken and salad(pickle, lettuce and tomato), and that mouthful is a dry one. </p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Grilled-Chicken">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/chicken-sandwiches/chicken/grilled-chicken-sandwich.png" alt="Grilled Chicken">
+                                        <div class="caption">
+                                            Grilled Chicken
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>To be reviewed.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Beef-Pot-Roast">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/chicken-sandwiches/sandwiches/beef-pot-roast.png" alt="Beef Pot Roast">
+                                        <div class="caption">
+                                            Beef Pot Roast
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>A juicy braised chuck roast in a bun, and that’s it. This sandwich represents a bit of a quandary for me: I would recommend trying it if you want something new that’s not a burger, but this is such a boring sandwich. The flavor is nice but monotone and one-note, I’d recommend adding the BBQ sauce to compliment. I’ve seen it said that this sandwich is the best on the menu for “hitting your macros”.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Grilled-Reuben-Melt">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/chicken-sandwiches/sandwiches/grilled-reuben.png" alt="Grilled Reuben Melt">
+                                        <div class="caption">
+                                            Grilled Reuben Melt
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>Now here’s an interesting sandwich. Between that tasty toasted rye bread is a pile of corned beef and sauerkraut topped with swiss cheese and sauced with a Thousand Island dressing. The spiced brininess of corned beef is complemented with acidic sauerkraut and tangy Thousand Island. This sandwich is not an easy inclusion for Culver’s, it has two ingredients not found anywhere else on the menu, but I think they stand by it because it has a flavor tha makes it worthwhile. </p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Pork-Loin">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/chicken-sandwiches/sandwiches/pork-loin.png" alt="Pork Loin">
+                                        <div class="caption">
+                                            Pork Loin
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>To be reviewed.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Harvest-Veggie-Burger">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/chicken-sandwiches/sandwiches/veggie-burger.png" alt="Harvest Veggie Burger">
+                                        <div class="caption">
+                                            Harvest Veggie Burger
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>To be reviewed.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Grilled-Cheese">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/chicken-sandwiches/sandwiches/grilled-cheese.png" alt="Grilled Cheese">
+                                        <div class="caption">
+                                            Grilled Cheese
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>To be reviewed.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Corn-Dog">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/chicken-sandwiches/sandwiches/corn-dog.png" alt="Corn Dog">
+                                        <div class="caption">
+                                            Corn Dog
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>To be reviewed.</p>
+                            </div>
+
+                        </article>
+                        <article class="reviewcategory" id="Seafood-Salads">
+                            <h2>Seafood & Salads</h2>
+                            <p>fishy</p>
+                            <hr>
+
+                            <div class="container">
+                                <div class="polaroiditem" id="North-Atlantic-Cod-Sandwich">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/seafood-salads/seafood/na-cod-sandwich.png" alt="North Atlantic Cod Sandwich">
+                                        <div class="caption">
+                                            North Atlantic Cod Sandwich
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>Ordering fast food fish may feel like playing with fire (the kind of fire that gives you abdominal pains), but I rest easy while ordering a Culver’s cod sandwich. They shot themselves in the foot with their commitment to quality, it’s not an exciting gamble to buy seafood here like at other quick service dining establishments. The cod filet is tender, flaky and light. The fried batter enveloping this fragile filet provides structure and a crispy contrast to the flesh within. The way in which the subtly sweet taste of cod mingles with frying oil is not exactly my cup of tea, but I can understand why it’s popular. The fish sits atop a bed of shredded cheddar and lettuce, which in turn sits atop a layer of tartar sauce slathered on the bottom bun. Sharp pops of saltiness are fired off by the cheese which is tempered by the cool freshness of the lettuce, and the creamy relish flavors from tartar sauce rounds the whole thing off to make this sandwich well-balanced in every bite.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="North-Atlantic-Cod-Dinner">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/seafood-salads/seafood/na-cod-dinner-2pc.png" alt="North Atlantic Cod Dinner">
+                                        <div class="caption">
+                                            North Atlantic Cod Dinner
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>To be Reviewed.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Butterfly-Jumbo-Shrimp-Dinner">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/seafood-salads/seafood/shrimp-dinner-6pc.png" alt="Butterfly Jumbo Shrimp Dinner">
+                                        <div class="caption">
+                                            Butterfly Jumbo Shrimp Dinner
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>To be Reviewed.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Chicken-Cashew-Salad">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/seafood-salads/salads/chicken-cashew.png" alt="Chicken Cashew Salad">
+                                        <div class="caption">
+                                            Chicken Cashew Salad
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>To be Reviewed.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Cranberry-Bacon-Bleu-Salad">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/seafood-salads/salads/cranberry-bacon-bleu.png" alt="Cranberry Bacon Bleu Salad">
+                                        <div class="caption">
+                                            Cranberry Bacon Bleu Salad
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>To be Reviewed.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Garden-Fresco-Salad">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/seafood-salads/salads/garden-fresco.png" alt="Garden Fresco Salad">
+                                        <div class="caption">
+                                            Garden Fresco Salad
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>I don't eat salad often, but yeah this is a good salad.The leafy greens (iceberg lettuce, green leaf lettuce, red cabbage and shredded carrot) are crisp and fresh, and won’t wilt easily even when supporting a hot, grilled-to-order chicken breast. Sliced cucumber and grape tomatoes contribute a lot: their refreshing flavor and the texture of plant cells bursting between teeth and spilling out their hydrating insides. This salad is intended to be a meal, and it has elements that please reticent salad eaters. Croutons, cheddar cheese and chicken breast add saltiness, 40% of the daily recommended allowance for sodium worth. I wish I could make the claim that it’s the front of the pack for burger chain salads, but I don’t ever order salads from the other places.</p>
+                            </div>
+
+                        </article>
+
+                        <article class="reviewcategory" id="Sides">
+                            <h2>Sides</h2>
+                            <p>u want fries w that?</p>
+                            <hr>
+
+                            <div class="container" id="Crinkle-Cut-Fries">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/sides/crinkle-cut-fries.png" alt="Crinkle Cut Fries">
+                                        <div class="caption">
+                                            Crinkle Cut Fries
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>There’s this “lifehack” at McDonald’s to guarantee fresh fries: order them with no salt and they have to make a new batch just for you. If you want fresh fries at Culver’s, here’s what you do: order fries. I can’t recall a time where I ordered fries here that were soggy or stale, and I don’t know how they do it. I can’t find any claim on their website that they are fried to order, they would be very proud about it if they did. Crinkle cut is a great feature, it’s a really nice cut for texture and saucing as the ridges can hold onto more ketchup or cheese. They are thick for a fast food fry as well, with a fluffy interior to boot.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Wisconsin-Cheese-Curds">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/sides/cheese-curds.png" alt="Wisconsin Cheese Curds">
+                                        <div class="caption">
+                                            Wisconsin Cheese Curds
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>This is Culver’s must-order item. Please ignore everything I’ve said about anything else and just try these for yourself. Yellow and white cheddar cheese nuggets are dusted in a seasoned flour, dipped in a flavored batter and breaded in a mixture of spices, bread crumbs and parmesan and romano cheese before being fried to golden brown in canola oil. Indulgent, decadent, rich little pieces of fried cheese that, when fresh, squeak with every bite. Culver’s maintains a partnership with a single dairy that produces the curds. The result of this is consistent quality across locations and the idea that no matter where in the country you are, the curds at your local Culver’s are a taste of Wisconsin. </p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Onion-Rings">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/sides/onion-rings.png" alt="Onion Rings">
+                                        <div class="caption">
+                                            Onion Rings
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>To be reviewed.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Pretzel-Bites">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/sides/pretzel-bites-cheese.png" alt="Pretzel Bites">
+                                        <div class="caption">
+                                            Pretzel Bites
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>Deep fried pretzel balls served with hot cheddar cheese sauce are an oddball fast food side I’ve not seen imitated elsewhere. The fry on these guys gives them a crisp outer shell with that signature pretzel maillard reaction flavor, and that gives way to a chewy and fluffy center. The cheese sauce is like a higher quality movie theater nacho sauce; it’s salty and coats the nuggets well enough. To be frank, I don’t think the sauce adds much to the experience but I won’t knock it for being included. Order these to satisfy the craving for salty, cheesy, carbs.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Georges-Chili">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/sides/chili.png" alt="George's® Chili">
+                                        <div class="caption">
+                                            George's® Chili
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>To be reviewed.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Georges-Chili-Supreme">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/sides/chili-supreme.png" alt="George's® Chili Supreme">
+                                        <div class="caption">
+                                            George's® Chili Supreme
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>To be reviewed.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Chili-Cheddar-Fries">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/sides/chili-cheddar-fries.png" alt="Chili Cheddar Fries">
+                                        <div class="caption">
+                                            Chili Cheddar Fries
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>To be reviewed all over my shirt.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Steamed-Broccoli">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/sides/broccoli.png" alt="Steamed Broccoli">
+                                        <div class="caption">
+                                            Steamed Broccoli
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>To be reviewed.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Mashed-Potatoes-Gravy">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/sides/mashed-potatoes.png" alt="Mashed Potatoes & Gravy">
+                                        <div class="caption">
+                                            Mashed Potatoes & Gravy
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>To be reviewed.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Coleslaw">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/sides/coleslaw.png" alt="Coleslaw">
+                                        <div class="caption">
+                                            Coleslaw
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>To be reviewed.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Garden-Side-Salad">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/sides/salad.png" alt="Garden Side Salad">
+                                        <div class="caption">
+                                            Garden Side Salad
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>To be reviewed.</p>
+                            </div>
+                            <hr>
+
+                            <div class="container" id="Applesauce">
+                                <div class="polaroiditem">
+                                    <div class="polaroid"><img src="https://cdn.culvers.com/menu/images/item/sides/applesauce.png" alt="Applesauce">
+                                        <div class="caption">
+                                            Applesauce
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>To be reviewed.</p>
+                            </div>
+
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-auto paper text-center mx-auto w-auto h-auto p-0 justify-content-md-center">
+                    | <a href="index.html">home</a> |
+                    <a href="culvers.html">culver's</a> |
+                    <a href="restaurants.html">restaurants</a> |
+                    <a href="recipes.html">recipes</a> |
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll to top button is from this w3schools tutorial:
+        https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top -->
+        <button onclick="topFunction()" id="scroll-to-top" title="scroll to top" style="position:sticky; float:right;">Top</button>
+            <script>
+                let mybutton = document.getElementById("scroll-to-top");
+
+                window.onscroll = function() {scrollFunction()};
+
+                function scrollFunction() {
+                    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        mybutton.style.display = "block";
+                    } else {
+                        mybutton.style.display = "none";
+                    }
+                }
+
+                function topFunction() {
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                }
+            </script>
+    </body>
+
+
+</html>

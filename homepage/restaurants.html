@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+
+
+
+        <title>Dining | Max</title>
+        <link rel="icon" type="image/x-con" href="imgs/favicon16x16.png">
+
+        <style>
+
+            body {
+                background: #f3f3f3;
+                background-image: linear-gradient(90deg, rgba(200,0,0,.25) 50%, transparent 0),
+                linear-gradient(rgba(200,0,0,.25) 50%, transparent 0);
+                background-size: 60px 60px;
+            }
+
+            main {
+                margin: auto;
+                padding: 5px;
+            }
+
+            .scroll-area {
+                /* position: relative; */
+                height: 100%;
+                /* overflow-y: scroll; */
+            }
+
+            main>h1,
+            p,
+            .reviewcategory,
+            .reviewitem {
+                margin: 10px;
+                padding: 5px;
+            }
+
+            #navbar-left {
+
+                border: 20px solid transparent;
+
+                border-image-source: url("imgs/menu border.png");
+                border-image-slice: 55;
+                border-image-width: 20px;
+                border-image-outset: 0px;
+                border-image-repeat: round;
+
+                position: fixed;
+                max-height: 75vh;
+                overflow-y: auto;
+
+                background-color: #FFFCF5;
+                background-size: 40px 40px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.3), 0 0 300px 25px rgba(222,198,122,0.3) inset;
+            }
+
+            .reviewcategory,
+            #opening {
+
+                border: 40px solid transparent;
+
+                border-image-source: url("imgs/menu border.png");
+                border-image-slice: 55;
+                border-image-width: 40px;
+                border-image-repeat: round;
+
+                background-color: #FFFCF5;
+                background-size: 40px 40px;
+                /* background-image: radial-gradient(circle, #e0e0e0 1px, rgba(0, 0, 0, 0) 1px); */
+
+                box-shadow: 0 0 10px rgba(0,0,0,0.3), 0 0 300px 25px rgba(222,198,122,0.3) inset;
+
+                text-align: center;
+
+            }
+
+            .reviewcategory > p,
+            .container > p {
+                text-align: justify;
+            }
+
+            #menu-logo {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 100%;
+                height: auto;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <header>
+
+            <a href="index.html">
+                <img id="logo" src="imgs/homepage-logo-small.png" alt="Lemme Eat That For You homepage">
+            </a>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-auto paper text-center mx-auto w-auto h-auto p-0 my-2 justify-content-md-center">
+                        | <a href="index.html">home</a> |
+                        <a href="culvers.html">culver's</a> |
+                        <a href="restaurants.html">restaurants</a> |
+                        <a href="recipes.html">recipes</a> |
+                    </div>
+                </div>
+            </div>
+
+
+        </header>
+
+
+
+        <main>
+            <div class="row flex-nowrap">
+                <div class="col-2" id="culvers-nav">
+                    <nav id="navbar-left" class="h-auto flex-column align-items-stretch pe-4 border-end">
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link" href="#opening">Intro</a>
+                            <a class="nav-link" href="#Aloha">Aloha Eats</a>
+                            <a class="nav-link" href="#Spacca">Spacca Napoli Pizzeria</a>
+                            <a class="nav-link" href="#Ming">Ming Hin Cuisine</a>
+                        </nav>
+                    </nav>
+                </div>
+
+                <div class="col">
+                    <div class="scroll-area" data-bs-spy="scroll" data-bs-target="#navbar-left" tabindex="0">
+                        <div class="container" id="opening">
+                            <img id="menu-logo" src="imgs/Maxs-logo-print.png" alt="Max's" style="align-self:center;max-width:100%;height:auto;">
+                            <h2 id="My-Take" style="font-family:'Sail'; font-size:50px;">- restaurant picks -</h2>
+                            <hr>
+                            <p>I’ve lived in Chicago for some years now and I love going out to eat. Here are some restaurants that I especially like.</p>
+
+                        </div>
+
+                        <article class="reviewcategory" id="Aloha">
+                            <h1 style="margin:40px">
+                                <span style="font-family:'Sail'; font-size:120px;">- Aloha Eats -</span>
+                            </h1>
+                            <div class="row flex-nowrap mx-auto my-0">
+                                <div class="col">
+                                    <p>Address: 2534 N Clark St., Chicago, Il</p>
+                                </div>
+                                <div class="col">
+                                    <p>Website: <a href="https://www.alohaeats.com/">www.alohaeats.com</a></p>
+                                </div>
+                            </div>
+
+
+                            <hr>
+
+                            <div class="menuimg">
+                                <img src="https://lh5.googleusercontent.com/p/AF1QipN-KBmfeoq3zkXqGuMhRv_ogPYE-9brs18JWKTI=s0" alt="interior of Aloha Eats">
+                            </div>
+
+
+                            <!-- <p>Aloha Eats is a plate lunch spot that gives the impression of having been lifted from one of the eight islands and airdropped right onto Clark Street. Stepping inside, a homey space is conveyed by varnished wood walls covered in images that evoke Hawaii. You’ll see framed pictures of surfers and palm trees, a HI license plate, and a seashell lei on your way up to the counter. Despite much of their business coming from pick-up and delivery orders, the interior is comfortable and inviting. I like the four thick colored stripes running horizontally along the north wall; it’s trim you’d see on a surfboard blown up to wall size.</p> -->
+
+                            <!-- <p>The person behind the register is always a friendly face and quick to offer a recommendation should you ask. Aloha Eats is a family-run affair, and I find that fact to be an important part of their identity. The feel you get from this independent, local plate lunch shop is no facade; it’s the culmination of efforts to represent a much loved cuisine in a city that’s thousands of miles away from the source.</p> -->
+
+                            <div class="row flex-nowrap mx-auto my-5">
+                                <div class="col menuimg">
+                                    <div class="mx-auto" style="width:600px">
+                                        <!-- from: https://htmlcsstoimage.com/examples/instagram-post-screenshot -->
+                                        <blockquote style='width:600px;' class='instagram-media' data-instgrm-version='14'>
+
+                                            <a href='https://www.instagram.com/p/C2QC-1UvzeD/'></a>
+
+                                        </blockquote>
+                                        <script src="//www.instagram.com/embed.js"></script>
+
+                                    <!-- end of insta embed -->
+                                    </div>
+                                </div>
+
+
+                                <div class="col">
+                                    <h3>My Take</h3>
+                                    <p style="text-align:justify">Aloha Eats is a plate lunch spot that gives the impression of having been lifted from one of the eight islands and airdropped right onto Clark Street. Stepping inside, a homey space is conveyed by varnished wood walls covered in images that evoke Hawaii. You’ll see framed pictures of surfers and palm trees, a HI license plate, and a seashell lei on your way up to the counter. Despite much of their business coming from pick-up and delivery orders, the interior is comfortable and inviting. I like the four thick colored stripes running horizontally along the north wall; it’s trim you’d see on a surfboard blown up to wall size.</p>
+                                    <p style="text-align:justify">The person behind the register is always a friendly face and quick to offer a recommendation should you ask. Aloha Eats is a family-run affair, and I find that fact to be an important part of their identity. The feel you get from this independent, local plate lunch shop is no facade; it’s the culmination of efforts to represent a much loved cuisine in a city that’s thousands of miles away from the source.</p>
+                                    <p style="text-align:justify">Your order comes in the tried and true styrofoam take-out container even if you dine in. I like that I can take my leftovers home by just closing up the lid. Wait, did I really just say leftovers? That’s right. Even for me, the portions at Aloha are huge and I can get at least two meals from a combo plate lunch order. The menu doesn’t have any gaps. All the local Hawaiian classics from loco moco to spam musubi are represented. I’ll go over my favorite orders in the menu highlights, but I’d like to shine a spotlight on the burgers and saimin options that are available. </p>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <h3> Menu Highlights</h3>
+
+                            <div class="row flex-nowrap mx-auto my-5">
+                                <div class="col menuhighlight">
+                                    <img src="https://res-4.cloudinary.com/upserve/image/upload/v1584547486/due8ddpgpexrtntjgwnz.jpg" alt="BBQ Mix Plate">
+
+                                </div>
+                                <div class="col align-baseline mx-2 px-2 menuhighlight-caption">
+                                    <h4>BBQ Mix Plate</h4>
+                                    <p>This decadent meal will have you gripping styrofoam with both hands. Generous portions of grilled bulgogi style beef, chicken thighs and marinated short ribs are piled on a bed of cabbage with two scoops of rice and one scoop of mac salad. At $21.85 (at the time of writing) this represents the best price to protein value in all of Chicago. This is my go-to for many reasons: it’s a treat, it answers my indecision by including a few different grill items, it feeds me for a while and it reheats well.</p>
+                                </div>
+                            </div>
+
+                            <div class="row flex-nowrap mx-auto my-5">
+                                <div class="col align-baseline mx-2 px-2 menuhighlight-caption">
+                                    <h4>Mochiko Chicken</h4>
+                                    <p>Dark meat chicken is marinated in a soy, ginger and garlic blend and coated in sweet rice flour before deep frying. Chicken karaage’s cousin who moved to Hawaii. The mochiko layer on the outside lends a texture that distinguishes itself from other fried chicken chunks. It has an almost sticky chew to it while still being crisp with the maillard reaction flavors of the fryer. The flavor of the marinade is enough to stand on its own but also plays nice with dipping sauces.</p>
+                                </div>
+                                <div class="col menuhighlight">
+                                    <img src="https://res-3.cloudinary.com/upserve/image/upload/v1610562651/tsn4xi825jfaefjfp8ij.jpg" alt="Mochiko Chicken">
+                                </div>
+                            </div>
+
+                            <div class="row flex-nowrap mx-auto my-5">
+                                <div class="col menuhighlight">
+                                    <img src="https://lh5.googleusercontent.com/p/AF1QipNdFXtPPq6oweEExEEwLS8FODHrEKn76Qlc9GA=s0" alt="Spam Musibis">
+
+                                </div>
+                                <div class="col align-baseline mx-2 px-2 menuhighlight-caption">
+                                    <h4>Musubis</h4>
+                                    <p>A grilled slice of saucy spam over a block of rice wrapped in a sheet of nori. A little food history lesson: due to Hawaii being the host of multiple US military bases there came to be a glut of shelf stable ingredients imported from the mainland during and after World War II. The availability and prevalence of ingredients like spam are entwined in the DNA of ‘local’ Hawaiian food, which is distinct from traditional Hawaiian foods like poi and poke. I mention the story of the spam musubi because it fascinates me, I can’t help but think about it when I eat them. Aloha Eats offers delicious musubis, and offers many types. Musubis are wrapped up in cling film here which I laud not only for improving portability but also because it uniformly distributes heat and aroma through the entire package, kind of the same concept behind a foil-wrapped burrito.</p>
+                                </div>
+                            </div>
+
+                        </article>
+
+                        <article class="reviewcategory" id="Spacca">
+                            <h1 style="margin:40px">
+                                <span style="font-family:'Sail'; font-size:100px;">- Spacca Napoli Pizzeria -</span>
+                            </h1>
+                            <div class="row flex-nowrap mx-auto my-0">
+                                <div class="col">
+                                    <p>Address: 1769 W. Sunnyside Ave. Chicago, IL</p>
+                                </div>
+                                <div class="col">
+                                    <p>Website: <a href="https://www.spaccanapolipizzeria.com/">www.spaccanapolipizzeria.com</a></p>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <div class="menuimg">
+                                <img src="https://lh3.googleusercontent.com/p/AF1QipOz6-y1332nUCpHCOFY6OLmsYDloVdBc9rAi2fr=s0" alt="Exterior of Spacca Napoli Pizzeria">
+                            </div>
+
+                            <div class="row flex-nowrap mx-auto my-5">
+                                <div class="col menuimg">
+                                    <div class="mx-auto" style="width:600px">
+                                        <!-- from: https://htmlcsstoimage.com/examples/instagram-post-screenshot -->
+                                        <blockquote style='width:600px;' class='instagram-media' data-instgrm-version='14'>
+
+                                            <a href='https://www.instagram.com/p/CTvCPDeljax/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='></a>
+
+                                        </blockquote>
+                                        <script src="//www.instagram.com/embed.js"></script>
+
+                                    <!-- end of insta embed -->
+                                    </div>
+                                </div>
+
+
+                                <div class="col">
+                                    <h3>My Take</h3>
+                                    <p style="text-align:justify">I did not know about Spacca Napoli Pizzeria when I was invited to share a meal there with my in-laws. My pizza credibility is low, in college I would eat slices from 7-Eleven during their happy hour. They must’ve been like a dollar a slice; a price made possible by letting slices stale under the orange heat lamp glow for hours. But me, I’ll eat any old pizza. Sprinkle some red pepper flakes and oregano from home on top and you don’t taste that “warmed-through” flavor as much. My partner’s family, however, moved to Illinois from Italy a decade ago. Having traveled around pizza’s homeland extensively and tasting the truly great stuff, they would throw convenience store za in the garbage.</p>
+                                    <p style="text-align:justify">The restaurant is styled as if it were a Tuscan farmhouse in Chicago. Red river clay paint coats the exterior of a brick building in the historic Ravenswood industrial corridor. In the dining room the earthy natural tones continue to be represented in the rustic red tile floor and wall accents. Deep brown tables and chairs display natural wood grain patterns to contrast the artificial sheen of sparse copper accents reflecting warm light from the ceiling. You’ll see some of this copper amidst a glimmering tile mural of the restaurant’s triple wheat head logo on the wood burning oven. The fiery heart of Spacca Napoli was built by third and fourth generation oven specialists from Italy.</p>
+                                    <p style="text-align:justify">This pizza has a lot of clout, the pizzeria is a member of the Associazione Verace Pizza Napoletana and is often ranked on lists of best pizzas in the country. With this in mind, I can say with some certainty that I got my first taste of real Neapolitan pizza at Spacca Napoli on the day I was introduced to it by my in-laws. If you’re not persuaded by the idea of authenticity, and maybe you find incredulity in institutions that mandate what is or isn’t a real pizza, you’ll still want to try this pizza. It’s a fantastic pizza, it would be without any of its accreditation or acclaim, even if it’s a little more than a dollar a slice.</p>
+                                </div>
+                            </div>
+
+                            <div class="menuimg">
+                                <img src="https://lh5.googleusercontent.com/p/AF1QipMjWIq_HOATcAr0WMtu-u9IGnJErzk0FLnJ60nc=s0" alt="Wood fired oven">
+                            </div>
+
+                            <hr>
+
+                            <h3> Menu Highlights</h3>
+
+                            <div class="row flex-nowrap mx-auto my-5">
+                                <div class="col menuhighlight">
+                                    <img src="https://s3-media0.fl.yelpcdn.com/bphoto/xTOL_Vc_JWkSAB4PdQkqFw/o.jpg" alt="Buffalina pizza">
+
+                                </div>
+                                <div class="col align-baseline mx-2 px-2 menuhighlight-caption">
+                                    <h4>Pizza Bufalina</h4>
+                                    <p>At a pizzeria, dough matters most. Unlike other restaurant concepts, pizzerias have one ingredient that makes up half of almost every dish. It’s important to get right. The dough which makes up the foundation of Spacca Napoli’s pizza is of exceptional quality. It’s light and ethereal yet holds up to the sauce and toppings placed atop it. The crust has this toothsome chew with a few leopard spots for some charred flavor. The best pizza to sample this dough on your first visit is the Bufalina. It’s the classic margherita preparation with mozzarella di bufala instead of a cow’s milk fior di latte. Spacca Napoli imports much of it’s pantry from Italy, and as such I think it’s only right to get the special cheese that’s hard to find anywhere on your first visit. You might ask, what’s the difference between cow and buffalo milk in the context of mozzarella? Buffalo milk has a slightly different flavor, it’s creamier and more “concentrated” than regular cow milk flavor, hence the reputation as a superior pizza cheese. Give it a try yourself if you’re curious!</p>
+                                </div>
+                            </div>
+
+                            <div class="row flex-nowrap mx-auto my-5">
+                                <div class="col align-baseline mx-2 px-2 menuhighlight-caption">
+                                    <h4>The Special</h4>
+                                    <p>At every possible sightline from every seat in the restaurant there’s a chalkboard that lists the daily specials. Spacca Napoli seeks out and maintains relationships with suppliers in Italy that send over some exquisite ingredients. Many ingredients are once a year treats that can not have a perpetual place on the menu without sacrificing quality for 10 months of the year. The specials menu is there to tell you, hey, here’s what’s good right now that can only be good right now. This menu is also a showcase of creativity and artistry, a way of talking through the language of food. On the day of writing this review there is a special pizza that shares its name and many ingredients with the national dish of Palestine, musakhan. You won’t be disappointed with any pizza you choose at Spacca Napoli, but you might (like me) have the fear of missing out on the best seasonal dishes. Get the pizza from the chalkboard.</p>
+                                </div>
+                                <div class="col menuhighlight">
+                                    <img src="https://lh5.googleusercontent.com/p/AF1QipMSPgBKhmEMAFHfdH8qOgdgXr0BtUTO1Hqv4BU1=s0" alt="specials board">
+                                </div>
+                            </div>
+
+                        </article>
+
+                        <article class="reviewcategory" id="Ming">
+                            <h1 style="margin:40px">
+                                <span style="font-family:'Sail'; font-size:100px;">- Ming Hin Cuisine -</span>
+                            </h1>
+                            <div class="row flex-nowrap mx-auto my-0">
+                                <div class="col">
+                                    <p>Address: 2168 S. Archer Ave. Chicago, IL</p>
+                                </div>
+                                <div class="col">
+                                    <p>Website: <a href="https://www.minghincuisine.com/home/">www.minghincuisine.com/home</a></p>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <div class="menuimg">
+                                <img src="https://www.minghincuisine.com/assets/img/photos/chinatown/1200x600/13.jpg" alt="Entranceway to Ming Hin Cuisine">
+                            </div>
+
+                            <div class="row flex-nowrap mx-auto my-5">
+
+                                <div class="col">
+                                    <h3>My Take</h3>
+                                    <p style="text-align:justify">Review pending.</p>
+                                </div>
+
+                                <div class="col menuimg">
+                                    <div class="mx-auto" style="width:600px">
+                                        <!-- from: https://htmlcsstoimage.com/examples/instagram-post-screenshot -->
+                                        <blockquote style='width:600px;' class='instagram-media' data-instgrm-version='14'>
+
+                                            <a href='https://www.instagram.com/p/B9adAP1hgL-/'></a>
+
+                                        </blockquote>
+                                        <script src="//www.instagram.com/embed.js"></script>
+
+                                    <!-- end of insta embed -->
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-4">
+                <nav id="culvers-nav" class="h-100 flex-column align-items-stretch pe-4 border-end">
+                    <nav class="nav nav-pillsflex-coulmn">
+                        <a class="nav-link" href="#My Take">My Take</a>
+                    </nav>
+                </nav>
+            </div>
+        </div> -->
+
+
+            <!-- <nav id="culvers-nav" class="section-nav">
+            <ol>
+                <li class="nav-item"><a class="nav-link" href="#My Take">My Take</a></li>
+                <li class="nav-item"><a class="nav-link" href="#ButterBurgers">ButterBurgers®</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Chicken & Sandwiches">Chicken & Sandwiches</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Seafood & Salads">Seafood & Salads</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Sides">Sides</a></li>
+            </ol>
+
+        </nav> -->
+
+        </main>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-auto paper text-center mx-auto w-auto h-auto p-0 my-2 justify-content-md-center">
+                    | <a href="index.html">home</a> |
+                    <a href="culvers.html">culver's</a> |
+                    <a href="restaurants.html">restaurants</a> |
+                    <a href="recipes.html">recipes</a> |
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll to top button is from this w3schools tutorial:
+        https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top -->
+        <button onclick="topFunction()" id="scroll-to-top" title="scroll to top">Top</button>
+        <script>
+            let mybutton = document.getElementById("scroll-to-top");
+
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+
+    </body>
+
+</html>
